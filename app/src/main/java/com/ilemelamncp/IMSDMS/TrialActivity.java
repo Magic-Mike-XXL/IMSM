@@ -25,6 +25,9 @@ public class TrialActivity extends AppCompatActivity
 				public void onClick(View p1)
 				{
 					if (infoIsValid()) {
+						SharedPreferences prefs = getSharedPreferences(Values.PREFSNAME, 0);
+						prefs.edit().putBoolean(Values.ISREGISTERED, true);
+						prefs.edit().putString(Values.REGISTEREDEMAIL, inputEmail.getText().toString());
 						startActivity(new Intent(TrialActivity.this, MainActivity.class));
 					}
 				}

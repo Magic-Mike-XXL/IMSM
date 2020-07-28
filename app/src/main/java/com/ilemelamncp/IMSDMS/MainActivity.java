@@ -6,6 +6,8 @@ import android.support.v7.app.*;
 import android.view.*;
 import android.widget.*;
 
+//Fix autologin
+
 public class MainActivity extends AppCompatActivity
 {
 	private Button register, login;
@@ -20,22 +22,28 @@ public class MainActivity extends AppCompatActivity
 		login = findViewById(R.id.login);
 		email = findViewById(R.id.et_email);
 		password = findViewById(R.id.et_password);
-		register.setOnClickListener(new View.OnClickListener(){
-			@Override
-			public void onClick(View p1)
-			{
-				startActivity(new Intent(MainActivity.this, TrialActivity.class));
-			}
-		});
-		login.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view)
-			{
-				if (infoIsValid()) {
-					startActivity(new Intent(MainActivity.this, InsideActivity.class));
-				}
-			}
-		});
+		SharedPreferences prefs = getSharedPreferences(Values.PREFSNAME, 0);
+		if (prefs.getBoolean(Values.ISREGISTERED, true)) {
+			startActivity(new Intent(MainActivity.this, InsideActivity.class));
+		}
+		else {
+			register.setOnClickListener(new View.OnClickListener(){
+					@Override
+					public void onClick(View p1)
+					{
+						startActivity(new Intent(MainActivity.this, TrialActivity.class));
+					}
+				});
+			login.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View view)
+					{
+						if (infoIsValid()) {
+							startActivity(new Intent(MainActivity.this, InsideActivity.class));
+						}
+					}
+				});
+		}
 	}
 	
 	private boolean infoIsValid() {
