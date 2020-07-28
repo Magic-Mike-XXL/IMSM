@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/image_1">
+
+	<ImageView
+		android:id="@+id/tv_logo"
+		android:layout_width="wrap_content"
+		android:layout_height="120dp"
+		android:layout_gravity="top|center"
+		android:src="@drawable/image_2"/>
+
+	<Button
+		android:id="@+id/personal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:text="weekly teaching report"
+		android:layout_marginBottom="10dp"/>
+
+	<Button
+		android:id="@+id/attendance"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:text="STAFF ATTENDANCE"
+		android:layout_marginBottom="10dp"/>
+
+	<Button
+		android:id="@+id/staff"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:text="results"
+		android:layout_marginBottom="10dp"/>
+
+	<Button
+		android:id="@+id/statistics"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:text="statistics"
+		android:layout_marginBottom="10dp"/>
+
+	<Button
+		android:id="@+id/announce"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:text="announcements"
+		android:layout_marginBottom="10dp"/>
+
+	<Button
+		android:id="@+id/finance"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:text="financial information"
+		android:layout_marginBottom="10dp"/>
+
+	<Button
+		android:id="@+id/admin"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:text="Administrator"
+		android:layout_marginBottom="10dp"/>
+
+</LinearLayout>
+

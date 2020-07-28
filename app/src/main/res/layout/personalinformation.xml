@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity"
+	android:background="@drawable/image_1">
+
+	<ImageView
+		android:id="@+id/tv_logo"
+		android:layout_width="wrap_content"
+		android:layout_height="120dp"
+		android:layout_gravity="center"
+		android:src="@drawable/image_2"
+		android:layout_centerHorizontal="true"/>
+
+	<EditText
+		android:id="@+id/et_name"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:hint="Teacher's Full Name"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginBottom="10dp"
+		android:padding="15dp"
+		android:inputType="textPersonName"
+		android:textSize="15sp"
+		style="@style/AppTheme"
+		android:textStyle="bold"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:layout_below="@id/tv_logo"/>
+
+	<EditText
+		android:id="@+id/school"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:hint="School Name"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginBottom="10dp"
+		android:padding="15dp"
+		android:inputType="text"
+		android:textSize="15sp"
+		android:textStyle="bold"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:layout_below="@id/et_name"/>
+
+	<EditText
+		android:id="@+id/daily"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:hint="Weekly Report"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginBottom="10dp"
+		android:padding="15dp"
+		android:inputType="text|textLongMessage"
+		android:textSize="15sp"
+		android:textStyle="bold"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:layout_below="@id/school"
+		android:height="67dp"/>
+
+	<EditText
+		android:id="@+id/atend"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:hint="Class Attendance"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginBottom="10dp"
+		android:padding="15dp"
+		android:inputType="number"
+		android:textSize="15sp"
+		android:textStyle="bold"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:layout_below="@id/daily"/>
+
+	<EditText
+		android:id="@+id/absent"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:hint="Total Absent"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginBottom="10dp"
+		android:padding="15dp"
+		android:inputType="number"
+		android:textSize="15sp"
+		android:textStyle="bold"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:layout_below="@id/atend"/>
+
+	<EditText
+		android:id="@+id/names"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:hint="Absentee's Names"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginBottom="10dp"
+		android:padding="15dp"
+		android:inputType="text"
+		android:textSize="15sp"
+		android:textStyle="bold"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:layout_below="@id/absent"/>
+
+	<Button
+		style="?android:attr/buttonStyleSmall"
+		android:layout_height="wrap_content"
+		android:layout_width="200dp"
+		android:text="SUBMIT"
+		android:layout_below="@id/names"
+		android:gravity="center"
+		android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
+

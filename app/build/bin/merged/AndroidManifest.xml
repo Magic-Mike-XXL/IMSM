@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ilemelamncp.IMSDMS"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="27" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="IMSDMS"
+        android:resizeableActivity="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.ilemelamncp.IMSDMS.MainActivity"
+            android:label="IMSDMS" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ilemelamncp.IMSDMS.TrialActivity" />
+        <activity android:name="com.ilemelamncp.IMSDMS.InsideActivity" />
+        <activity android:name="com.ilemelamncp.IMSDMS.PersonalInformation" />
+        <activity android:name="com.ilemelamncp.IMSDMS.ResultsActivity" />
+        <activity android:name="com.ilemelamncp.IMSDMS.FinanceActivity" />
+        <activity android:name="com.ilemelamncp.IMSDMS.AdminActivity" />
+        <activity android:name="com.ilemelamncp.IMSDMS.AnnouncementActivity" />
+        <activity android:name="com.ilemelamncp.IMSDMS.StatisticsActivity" />
+    </application>
+
+</manifest>

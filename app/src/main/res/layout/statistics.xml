@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/image_1">
+
+	<ImageView
+		android:id="@+id/tv_logo"
+		android:layout_width="wrap_content"
+		android:layout_height="120dp"
+		android:layout_gravity="top|center"
+		android:src="@drawable/image_2"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:text="Ilemela Municipal Secondary Department Management System"
+		android:textStyle="bold"
+		android:textColor="#FEFDFC"
+		android:gravity="center"
+		android:layout_gravity="center"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="STATISTICS"
+		android:textColor="#FEFCFC"
+		android:layout_gravity="center"
+		android:textSize="30sp"
+		android:textStyle="bold"/>
+
+</LinearLayout>
+
