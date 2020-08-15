@@ -5,33 +5,25 @@ import android.os.*;
 import android.support.v7.app.*;
 import android.view.*;
 import android.widget.*;
+import android.view.View.*;
 
-public class TrialActivity extends AppCompatActivity
+public class RegisterActivity extends AppCompatActivity
 {
 	
 	private EditText inputName, inputEmail, inputPass, inputRepass;
+	private Session session;
 	
 	@Override
 	protected void onCreate(Bundle savedInstance) {
 		super.onCreate(savedInstance);
 		setContentView(R.layout.trial);
+		this.session = Session.getInstance(this);
 		inputName = findViewById(R.id.et_name);
 		inputEmail = findViewById(R.id.et_email);
 		inputPass = findViewById(R.id.et_password);
 		inputRepass = findViewById(R.id.et_repassword);
 		Button register = findViewById(R.id.btn_register);
-		register.setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(View p1)
-				{
-					if (infoIsValid()) {
-						SharedPreferences prefs = getSharedPreferences(Values.PREFSNAME, 0);
-						prefs.edit().putBoolean(Values.ISREGISTERED, true);
-						prefs.edit().putString(Values.REGISTEREDEMAIL, inputEmail.getText().toString());
-						startActivity(new Intent(TrialActivity.this, MainActivity.class));
-					}
-				}
-		});
+		register.setOnClickListener(new RegisterListener());
 	}
 	
 	private boolean infoIsValid() {
@@ -60,5 +52,20 @@ public class TrialActivity extends AppCompatActivity
 			return false;
 		}
 		return true;
+	}
+	
+	private class RegisterListener implements View.OnClickListener {
+
+		@Override
+		public void onClick(View p1) {
+			if (infoIsValid()) {
+				UserModel model = new UserModel();
+				model.setUserName(inputName.getText().toString());
+				model.setEmail(inputEmail.getText().toString());
+				model.setPassword(inputPass.getText().toString());
+				session.addUser(model);
+				startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+			}
+		}
 	}
 }
