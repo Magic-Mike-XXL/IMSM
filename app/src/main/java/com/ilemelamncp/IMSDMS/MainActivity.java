@@ -29,8 +29,22 @@ public class MainActivity extends AppCompatActivity
 			startActivity(new Intent(MainActivity.this, InsideActivity.class));
 			finish();
 		}
-		register.setOnClickListener(new RegisterListener());
-		login.setOnClickListener(new LoginListener());
+		register.setOnClickListener(new View.OnClickListener(){
+				@Override
+				public void onClick(View p1) {
+					startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
+					finish();
+				}
+		});
+		login.setOnClickListener(new View.OnClickListener(){
+				@Override
+				public void onClick(View p1) {
+					if (infoIsValid()) {
+						startActivity(new Intent(getApplicationContext(), InsideActivity.class));
+						finish();
+					}
+				}
+		});
 	}
 	
 	private boolean infoIsValid() {
@@ -49,25 +63,5 @@ public class MainActivity extends AppCompatActivity
 			return false;
 		}
 		return true;
-	}
-	
-	private class RegisterListener implements View.OnClickListener {
-
-		@Override
-		public void onClick(View p1) {
-			startActivity(new Intent(MainActivity.this, RegisterActivity.class));
-			finish();
-		}
-	}
-	
-	private class LoginListener implements View.OnClickListener {
-
-		@Override
-		public void onClick(View p1) {
-			if (infoIsValid()) {
-				startActivity(new Intent(MainActivity.this, InsideActivity.class));
-				finish();
-			}
-		}
 	}
 }

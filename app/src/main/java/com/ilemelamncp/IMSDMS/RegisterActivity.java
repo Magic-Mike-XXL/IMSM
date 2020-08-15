@@ -16,7 +16,7 @@ public class RegisterActivity extends AppCompatActivity
 	@Override
 	protected void onCreate(Bundle savedInstance) {
 		super.onCreate(savedInstance);
-		setContentView(R.layout.trial);
+		setContentView(R.layout.register);
 		this.session = Session.getInstance(this);
 		inputName = findViewById(R.id.et_name);
 		inputEmail = findViewById(R.id.et_email);

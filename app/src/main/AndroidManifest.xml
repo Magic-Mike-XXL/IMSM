@@ -19,7 +19,7 @@
         </activity>
 
 		<activity
-			android:name=".TrialActivity" />
+			android:name=".RegisterActivity" />
 		<activity
 			android:name=".InsideActivity"/>
 		<activity
