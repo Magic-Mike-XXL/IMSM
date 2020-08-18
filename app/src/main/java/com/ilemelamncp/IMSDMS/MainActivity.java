@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity
 	{
 		super.onCreate(savedInstance);
 		setContentView(R.layout.main);
-		this.session = Session.getInstance(this);
+		session = Session.getInstance(this);
 		register = findViewById(R.id.registerButton);
 		login = findViewById(R.id.login);
 		email = findViewById(R.id.et_email);

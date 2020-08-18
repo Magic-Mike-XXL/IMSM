@@ -1,11 +1,11 @@
 package com.ilemelamncp.IMSDMS;
 
+import android.*;
 import android.content.*;
 import android.os.*;
 import android.support.v7.app.*;
 import android.view.*;
 import android.widget.*;
-import android.view.View.*;
 
 public class RegisterActivity extends AppCompatActivity
 {
@@ -47,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity
 			inputRepass.setError("Password Cannot Be Empty");
 			return false;
 		}
-		if (!inputRepass.equals(password)) {
+		if (!repass.equalsIgnoreCase((password))) {
 			inputRepass.setError("Passwords Do Not Match");
 			return false;
 		}
@@ -65,6 +65,7 @@ public class RegisterActivity extends AppCompatActivity
 				model.setPassword(inputPass.getText().toString());
 				session.addUser(model);
 				startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+				finish();
 			}
 		}
 	}

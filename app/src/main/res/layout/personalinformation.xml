@@ -120,7 +120,8 @@
 		android:text="SUBMIT"
 		android:layout_below="@id/names"
 		android:gravity="center"
-		android:layout_centerHorizontal="true"/>
+		android:layout_centerHorizontal="true"
+		android:id="@+id/submitButton"/>
 
 </RelativeLayout>
 
